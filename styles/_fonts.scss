@@ -1,0 +1,47 @@
+@font-face {
+	font-family: 'Bahnschrift SemiBold';
+	src: url('/fonts/Bahnschrift.woff2') format('woff2');
+	font-weight: 600; // Semi Bold
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Gotham Pro Regular';
+	src: url('/fonts/gothampro.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Gotham Pro Bold';
+	src: url('/fonts/gothampro_bold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Gotham Pro Light';
+	src: url('/fonts/gothampro_light.woff2') format('woff2');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Gotham Pro Medium';
+	src: url('/fonts/gothampro_medium.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Gotham Pro Wide';
+	src: url('/fonts/latinct_wide.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
