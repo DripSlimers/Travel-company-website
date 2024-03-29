@@ -1,0 +1,424 @@
+@charset "UTF-8";
+/**
+  Нормализация блочной модели
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/**
+	Убираем внутренние отступы слева тегам списков,
+	у которых есть атрибут class
+ */
+:where(ul, ol):where([class]) {
+  padding-left: 0;
+}
+
+/**
+	Убираем внешние отступы body и двум другим тегам,
+	у которых есть атрибут class
+ */
+body,
+:where(blockquote, figure):where([class]) {
+  margin: 0;
+}
+
+/**
+	Убираем внешние отступы вертикали нужным тегам,
+	у которых есть атрибут class
+ */
+:where(h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl):where([class]) {
+  margin-block: 0;
+}
+
+:where(dd[class]) {
+  margin-left: 0;
+}
+
+:where(fieldset[class]) {
+  margin-left: 0;
+  padding: 0;
+  border: none;
+}
+
+/**
+	Убираем стандартный маркер маркированному списку,
+	у которого есть атрибут class
+ */
+:where(ul[class]) {
+  list-style: none;
+}
+
+/**
+	Обнуляем вертикальные внешние отступы параграфа,
+	объявляем локальную переменную для внешнего отступа вниз,
+	чтобы избежать взаимодействие с более сложным селектором
+ */
+p {
+  --paragraphMarginBottom: 24px;
+  margin-block: 0;
+}
+
+/**
+	Внешний отступ вниз для параграфа без атрибута class,
+	который расположен не последним среди своих соседних элементов
+ */
+p:where(:not([class]):not(:last-child)) {
+  margin-bottom: var(--paragraphMarginBottom);
+}
+
+/**
+	Упрощаем работу с изображениями
+ */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/**
+	Наследуем свойства шрифт для полей ввода
+ */
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+html {
+  /**
+  Пригодится в большинстве ситуаций
+  (когда, например, нужно будет "прижать" футер к низу сайта)
+  */
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  /**
+  Пригодится в большинстве ситуаций
+  (когда, например, нужно будет "прижать" футер к низу сайта)
+  */
+  min-height: 100%;
+  /**
+  Унифицированный интерлиньяж
+  */
+  line-height: 1.5;
+}
+
+/**
+	Приводим к единому цвету svg-элементы
+ */
+svg *[fill] {
+  fill: currentColor;
+}
+
+svg *[stroke] {
+  stroke: currentColor;
+}
+
+/**
+	Чиним баг задержки смены цвета при взаимодействии с svg-элементами
+ */
+svg * {
+  transition-property: fill, stroke;
+}
+
+/**
+	Удаляем все анимации и переходы для людей,
+	которые предпочитают их не использовать
+ */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Helvetica Bold";
+  src: url("/fonts/Helvetica-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("/fonts/Helvetica.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NetflixSans Bold";
+  src: url("/fonts/NetflixSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NetflixSans Light";
+  src: url("/fonts/NetflixSans-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NetflixSans Medium";
+  src: url("/fonts/NetflixSans-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NetflixSans";
+  src: url("/fonts/NetflixSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NetflixSans Thin";
+  src: url("/fonts/NetflixSansThin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --color-light: #FFFFFF;
+  --color-dark: #000000;
+  --color-gray: #808080;
+  --color-gray-alt: #141414;
+  --color-accent: #2659C3;
+  --border-radius-button: 35.4px;
+  --border-radius-mobile: 32px;
+  --border-radius-input: 17.7px;
+  --border-radius-image: 8.9px;
+  --border-radius-image-alt: 23.2;
+  --header-height: 94.1px;
+  --section-padding-y: 44px;
+  --font-family-base: Helvetica;
+  --container-width: 1246.5px;
+  --container-padding-x: 132.84px;
+  --transition-duration: .2s;
+}
+
+.container {
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+  padding-top: var(--header-height);
+}
+.container__title {
+  color: var(--color-light);
+  width: 840px;
+  height: 184px;
+  line-height: 92px;
+  margin-bottom: 36px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  background: url(../../images/hero-bg.png) center center no-repeat;
+  background-size: cover;
+  height: 80vh;
+}
+
+body {
+  font-size: clamp(14px, 1.1903187409vw, 18px);
+  font-family: var(--font-family-base);
+  font-weight: 400;
+  line-height: 34px;
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+}
+
+h1, .h1 {
+  font-size: clamp(32px, 5.2903055151vw, 80px);
+}
+
+h2, .h2 {
+  font-size: clamp(24px, 2.3422827668vw, 35.42px);
+}
+
+h3, .h3 {
+  font-size: clamp(17.78px, 1.7570427192vw, 26.57px);
+}
+
+.header {
+  position: fixed;
+  padding-inline: 52.03px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  color: #fff;
+  width: 100%;
+  max-height: 94.1px;
+  height: var(--header-height);
+  align-items: center;
+}
+.header__logo-label {
+  font-weight: 700;
+  font-size: clamp(24px, 2.3422827668vw, 35.42px);
+}
+
+.nav {
+  font-weight: 400;
+  font-size: 17.71px;
+}
+.nav__list {
+  display: flex;
+  column-gap: 26.57px;
+}
+.nav__link {
+  font-size: 18px;
+  padding: 8.86px;
+}
+.nav__link:hover {
+  border-bottom: 1px solid var(--color-light);
+  transition: var(--transition-duration);
+}
+.nav__link:last-child {
+  font-weight: 700;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--header-height)var(--section-padding-y);
+  padding-top: var(--section-padding-y);
+}
+.section--padding-none {
+  padding-top: 0;
+}
+.section__inner {
+  display: flex;
+  flex-direction: column;
+  row-gap: 35.4px;
+}
+.section__title {
+  color: var(--color-light);
+}
+
+.hero {
+  background: url(./images/hero-bg.png) center no-repeat;
+  background-size: cover;
+  color: var(--color-light);
+}
+.hero__inner {
+  display: flex;
+  flex-direction: column;
+  row-gap: 44px;
+}
+.hero__title {
+  width: 840px;
+  height: 184px;
+  color: inherit;
+}
+.hero__title-label {
+  color: inherit;
+  line-height: 92px;
+}
+
+.search {
+  width: 100%;
+  height: 66.42px;
+  border-radius: var(--border-radius-input);
+  backdrop-filter: blur(35.42px);
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.search__inner {
+  width: 100%;
+  height: 100%;
+}
+.search__input {
+  border: none;
+  background-color: inherit;
+}
+
+.categories__inner {
+  display: flex;
+  flex-direction: column;
+  row-gap: 35.4px;
+}
+.categories__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.categories__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 17.7px;
+}
+.categories__label {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.destinations__list {
+  display: flex;
+  column-gap: 26.6px;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+.destinations__item {
+  min-width: 343.18px;
+  scroll-snap-align: start;
+  border-radius: var(--border-radius-image);
+  overflow: hidden;
+}/*# sourceMappingURL=styles.css.map */

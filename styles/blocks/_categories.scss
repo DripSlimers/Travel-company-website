@@ -1,0 +1,25 @@
+.categories {
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		row-gap: 35.4px;
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 17.7px;
+	}
+
+
+	&__label {
+		color: rgba(255,255,255, .4);
+	}
+}

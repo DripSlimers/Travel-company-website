@@ -1,0 +1,20 @@
+.section {
+	display: flex;
+	flex-direction: column;
+	padding-top: var(--header-height) + var(--section-padding-y);
+	padding-top: var(--section-padding-y);
+
+	&--padding-none {
+		padding-top: 0;
+	}
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		row-gap: 35.4px;
+	}
+
+	&__title {
+		color: var(--color-light);
+	}
+}

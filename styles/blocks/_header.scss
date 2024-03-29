@@ -1,0 +1,24 @@
+.header {
+	position: fixed;
+	padding-inline: 52.03px;
+	z-index: 1000;
+
+	display: flex;
+	justify-content: space-between;
+
+	background-color: transparent;
+	color: #fff;
+	width: 100%;
+	max-height: 94.1px;
+	height: var(--header-height);
+	align-items: center;
+
+	&__logo {
+		&-label {
+			font-weight: 700;
+			
+			@include fluid-text(35.42, 24);
+		}
+
+	}
+}
