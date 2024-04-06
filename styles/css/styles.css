@@ -217,10 +217,13 @@ h6 {
   --border-radius-image: 8.9px;
   --border-radius-image-alt: 23.2;
   --header-height: 94.1px;
-  --section-padding-y: 44px;
+  --section-title-margin-bottom: 35.42px;
+  --section-row-gap: 79.71px;
   --font-family-base: Helvetica;
   --container-width: 1246.5px;
   --container-padding-x: 132.84px;
+  --container-padding-top: 80px;
+  --title-padding-bottom: 44.28px;
   --transition-duration: .2s;
 }
 
@@ -228,7 +231,13 @@ h6 {
   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
   margin-inline: auto;
   padding-inline: var(--container-padding-x);
+  padding-top: var(--container-padding-top);
+}
+.container--under-header {
   padding-top: var(--header-height);
+}
+.container--padding-top-small {
+  padding-top: 62px;
 }
 .container__title {
   color: var(--color-light);
@@ -236,6 +245,11 @@ h6 {
   height: 184px;
   line-height: 92px;
   margin-bottom: 36px;
+}
+@media (max-width: 1512px) {
+  .container--no-paddings {
+    padding-right: 0;
+  }
 }
 
 .visually-hidden {
@@ -249,14 +263,6 @@ h6 {
   clip-path: inset(100%) !important;
   clip: rect(0 0 0 0) !important;
   overflow: hidden !important;
-}
-
-.main {
-  width: 100%;
-  height: 100%;
-  background: url(../../images/hero-bg.png) center center no-repeat;
-  background-size: cover;
-  height: 80vh;
 }
 
 body {
@@ -299,58 +305,60 @@ h3, .h3 {
 
 .header {
   position: fixed;
-  padding-inline: 52.03px;
   z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  background-color: transparent;
-  color: #fff;
   width: 100%;
+  background-color: transparent;
+}
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 52.03px;
   max-height: 94.1px;
   height: var(--header-height);
-  align-items: center;
+  color: #fff;
 }
 .header__logo-label {
   font-weight: 700;
   font-size: clamp(24px, 2.3422827668vw, 35.42px);
 }
-
-.nav {
+.header__menu {
   font-weight: 400;
   font-size: 17.71px;
 }
-.nav__list {
+.header__menu-list {
   display: flex;
   column-gap: 26.57px;
 }
-.nav__link {
+.header__menu-link {
   font-size: 18px;
   padding: 8.86px;
 }
-.nav__link:hover {
+.header__menu-link:hover {
   border-bottom: 1px solid var(--color-light);
   transition: var(--transition-duration);
 }
-.nav__link:last-child {
+.header__menu-link:last-child {
   font-weight: 700;
 }
 
-.section {
-  display: flex;
-  flex-direction: column;
-  padding-top: var(--header-height)var(--section-padding-y);
-  padding-top: var(--section-padding-y);
+.pool {
+  background: url(../../images/hero-bg.png) center center no-repeat;
+  background-size: cover;
+  box-shadow: 1px -167px 48px -31px rgb(255, 255, 255) inset;
 }
-.section--padding-none {
-  padding-top: 0;
-}
+
 .section__inner {
   display: flex;
   flex-direction: column;
-  row-gap: 35.4px;
+  row-gap: 35.42px;
 }
 .section__title {
   color: var(--color-light);
+  margin-bottom: var(--section-title-margin-bottom);
+}
+.section__title--dark {
+  color: var(--color-dark);
 }
 
 .hero {
@@ -361,14 +369,11 @@ h3, .h3 {
 .hero__inner {
   display: flex;
   flex-direction: column;
-  row-gap: 44px;
+  row-gap: 36px;
 }
 .hero__title {
   width: 840px;
   height: 184px;
-  color: inherit;
-}
-.hero__title-label {
   color: inherit;
   line-height: 92px;
 }
@@ -377,7 +382,7 @@ h3, .h3 {
   width: 100%;
   height: 66.42px;
   border-radius: var(--border-radius-input);
-  backdrop-filter: blur(35.42px);
+  backdrop-filter: blur(8px);
   background-color: rgba(255, 255, 255, 0.4);
 }
 .search__inner {
@@ -392,7 +397,6 @@ h3, .h3 {
 .categories__inner {
   display: flex;
   flex-direction: column;
-  row-gap: 35.4px;
 }
 .categories__list {
   display: flex;
@@ -410,15 +414,18 @@ h3, .h3 {
 }
 
 .destinations__list {
-  display: flex;
   column-gap: 26.6px;
-  scroll-snap-type: x mandatory;
-  overflow-x: scroll;
-  scrollbar-width: none;
 }
 .destinations__item {
   min-width: 343.18px;
   scroll-snap-align: start;
   border-radius: var(--border-radius-image);
   overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  scrollbar-width: none;
 }/*# sourceMappingURL=styles.css.map */

@@ -7,17 +7,13 @@
 	&__inner {
 		display: flex;
 		flex-direction: column;
-		row-gap: 44px;
+		row-gap: 36px;
 	}
 
 	&__title {
 		width: 840px;
 		height: 184px;
 		color: inherit;
-
-		&-label {
-			color: inherit;
-			line-height: 92px;
-		}
+		line-height: 92px;
 	}
 }

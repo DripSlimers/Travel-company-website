@@ -2,16 +2,18 @@
 	'normalize',
 	'fonts',
 	'mixins',
-	// 'media',
+	'media',
 	'variables',
 	'utils',
 	'globals';
 
 @import
 	'blocks/header',
-	'blocks/nav',
+	'blocks/pool',
 	'blocks/section',
 	'blocks/hero',
 	'blocks/search',
 	'blocks/categories',
-	'blocks/destinations';
+	'blocks/destinations',
+	'blocks/slider',
+	'blocks/offer-block';

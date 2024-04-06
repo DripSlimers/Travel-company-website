@@ -1,17 +1,21 @@
 .header {
 	position: fixed;
-	padding-inline: 52.03px;
 	z-index: 1000;
 
-	display: flex;
-	justify-content: space-between;
-
-	background-color: transparent;
-	color: #fff;
 	width: 100%;
-	max-height: 94.1px;
-	height: var(--header-height);
-	align-items: center;
+	background-color: transparent;
+	
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		
+		padding-inline: 52.03px;
+		max-height: 94.1px;
+		height: var(--header-height);
+
+		color: #fff;
+	}
 
 	&__logo {
 		&-label {
@@ -19,6 +23,32 @@
 			
 			@include fluid-text(35.42, 24);
 		}
-
 	}
+
+	&__menu {
+		font-weight: 400;
+		font-size: 17.71px;
+	
+		&-list {
+			display: flex;
+			column-gap: 26.57px;
+		}
+	
+		&-link {
+			font-size: 18px;
+	
+			padding: 8.86px;
+	
+			&:hover {
+				border-bottom: 1px solid var(--color-light);
+				transition: var(--transition-duration);
+			}
+	
+			&:last-child {
+				font-weight: 700;
+			}
+		}
+	}
+
+	
 }

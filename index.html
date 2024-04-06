@@ -8,37 +8,62 @@
 </head>
 <body>
 	<header class="header">
-		<a href='/' class="header__logo logo">
-			<p class='header__logo-label'>trxvl.</p>
-		</a>
+		<div class="header__inner">
+			<a href='/' class="header__logo logo">
+				<p class='header__logo-label'>trxvl.</p>
+			</a>
 
-		<nav class="nav hidden-mobile">
-			<ul class="nav__list">
-				<a class="nav__link" href="/">Home</a>
-				<a class="nav__link" href="/">Stays</a>
-				<a class="nav__link" href="/">Flights</a>
-				<a class="nav__link" href="/">Packages</a>
-				<a class="nav__link" href="/">Sign Up</a>
-			</ul>
-		</nav>
+			<nav class="header__menu hidden-mobile">
+				<ul class="header__menu-list">
+					<li class="header__menu-item">
+						<a class="header__menu-link" href="/">Home</a>
+					</li>
+
+					<li class="header__menu-item">
+						<a class="header__menu-link" href="/">Stays</a>
+					</li>
+
+					<li class="header__menu-item">
+						<a class="header__menu-link" href="/">Flights</a>
+					</li>
+
+					<li class="header__menu-item">
+						<a class="header__menu-link" href="/">Packages</a>
+					</li>
+
+					<li class="header__menu-item">
+						<a class="header__menu-link" href="/">Sign Up</a>
+					</li>
+				</ul>
+			</nav>
+
+		</div>
 	</header>
 
-	<div class="main">
-		<div class="container">
+	<main class="content">
 
-			<div class="container__title">
-				<h1>The whole world awaits.</h1>
-			</div>
+		<div class="pool">
+			<section class="section container container--under-header">
+				<div class="hero">
+					<div class="hero__inner">
+						<div class="hero__title">
+							<h1>The whole world awaits.</h1>
+						</div>
 
-			<section class="section section--padding-none search">
-				<div class="section__inner">
-					<input class="search__input" type="text">
+						<div class="hero__search search">
+							<div class="search__inner">
+								<input class="search__input" type="text">
+							</div>
+						</div>
+
+					</div>
 				</div>
 			</section>
 
-			<section class="section categories">
-					<div class="section__inner">
-						<div class="section__title categories__title">
+			<section class="section container">
+				<div class="categories">
+					<div class="categories__inner">
+						<div class="section__title">
 							<h2>Top categories</h2>
 						</div>
 
@@ -135,63 +160,169 @@
 						</ul>
 
 					</div>
+				</div>
 			</section>
 
-			<section class="section destinations">
-				<div class="section__inner">
-					<div class='section__title destinations__title'>
-						<h2>Top Vacation Destinations</h2>
+			<section class="section container container--no-paddings container--padding-top-small">
+				<div class="destinations">
+					<div class="destinations__inner">
+						<div class='section__title'>
+							<h2>Top Vacation Destinations</h2>
+						</div>
+
+						<ul class="destinations__list slider">
+
+							<li class="destinations__item">
+								<img
+									class="destinations__image"
+									src="./images/destinations/bali.png"
+									alt="bali"
+									width="343.18px" height="221.41px" loading="lazy"
+								>
+							</li>
+
+							<li class="destinations__item">
+								<img
+									class="destinations__image"
+									src="./images/destinations/bali.png"
+									alt="bali"
+									width="343.18px" height="221.41px" loading="lazy"
+								>
+							</li>
+
+							<li class="destinations__item">
+								<img
+									class="destinations__image"
+									src="./images/destinations/bali.png"
+									alt="bali"
+									width="343.18px" height="221.41px" loading="lazy"
+								>
+							</li>
+
+							<li class="destinations__item">
+								<img
+									class="destinations__image"
+									src="./images/destinations/bali.png"
+									alt="bali"
+									width="343.18px" height="221.41px" loading="lazy"
+								>
+							</li>
+							<li class="destinations__item">
+								<img
+									class="destinations__image"
+									src="./images/destinations/bali.png"
+									alt="bali"
+									width="343.18px" height="221.41px" loading="lazy"
+								>
+							</li>
+
+							<li class="destinations__item">
+								<img
+									class="destinations__image"
+									src="./images/destinations/kerry.png"
+									alt="Kerry"
+									width="343.18px" height="221.41px" loading="lazy"
+								>
+							</li>
+
+							<li class="destinations__item">
+								<img
+									class="destinations__image"
+									src="./images/destinations/sydney.png"
+									alt="Sydney"
+									width="343.18px" height="221.41px" loading="lazy"
+								>
+							</li>
+
+							<li class="destinations__item">
+								<img
+									class="destinations__image"
+									src="./images/destinations/paris.png"
+									alt="Paris"
+									width="343.18px" height="221.41px" loading="lazy"
+								>
+							</li>
+
+						</ul>
 					</div>
-
-					<ul class="destinations__list">
-						<li class="destinations__item">
-							<img
-								class="destinations__image"
-								src="./images/destinations/bali.png"
-								alt="bali"
-								width="343.18px" height="221.41px" loading="lazy"
-							>
-						</li>
-
-						<li class="destinations__item">
-							<img
-								class="destinations__image"
-								src="./images/destinations/kerry.png"
-								alt="Kerry"
-								width="343.18px" height="221.41px" loading="lazy"
-							>
-						</li>
-
-						<li class="destinations__item">
-							<img
-								class="destinations__image"
-								src="./images/destinations/sydney.png"
-								alt="Sydney"
-								width="343.18px" height="221.41px" loading="lazy"
-							>
-						</li>
-
-						<li class="destinations__item">
-							<img
-								class="destinations__image"
-								src="./images/destinations/paris.png"
-								alt="Paris"
-								width="343.18px" height="221.41px" loading="lazy"
-							>
-						</li>
-
-					</ul>
 				</div>
 			</section>
-
-
-
-
-				</div>
-				
-
 
 		</div>
-	</div>
+
+		<section class="section container">
+			<div class="offers">
+				<div class="offers__inner">
+					<div class="section__title section__title--dark">
+						<h2>Offers</h2>	
+					</div>
+
+					<div class="offers__content slider">
+						<div class="offer-block">
+							<div class="offer-block__image-container">
+								<img
+									class="offer-block__image"
+									src="./images/offers/offers-image1.png"
+									alt="Huge savings on flight with trxvl."
+									width="343.18px" height="233.56px" loading="lazy"
+								>
+							</div>
+
+							<div class="offer-block__content">
+								<div class="offer-block__company">
+									<p>Domestic Flights</p>
+								</div>
+								<div class="offer-block__title">
+									<h3>Huge savings on flight with trxvl.</h3>
+								</div>
+								
+								<div class="offer-block__description">
+									<p>Book domestic flights starting @ just ₹1459</p>
+								</div>
+
+								<button
+									class="button offer__button"
+									type="button"
+								>Book Now</button>
+							</div>
+						</div>
+
+						<div class="offer-block">
+							<div class="offer-block__image-container">
+								<img
+									class="offer-block__image"
+									src="./images/offers/offers-image2.png"
+									alt="Huge savings on flight with trxvl."
+									width="343.18px" height="233.56px" loading="lazy"
+								>
+							</div>
+
+							<div class="offer-block__content">
+								<div class="offer-block__company">
+									<p>Domestic Flights</p>
+								</div>
+								<div class="offer-block__title">
+									<h3>Huge savings on flight with trxvl.</h3>
+								</div>
+								
+								<div class="offer-block__description">
+									<p>Book domestic flights starting @ just ₹1459</p>
+								</div>
+
+								<button
+									class="button offer__button"
+									type="button"
+								>Book Now</button>
+							</div>
+						</div>
+					</div>
+
+
+
+				</div>
+			</div>
+		</section>
+
+	</main>
 </body>
 </html>
