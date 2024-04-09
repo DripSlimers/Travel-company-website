@@ -3,7 +3,7 @@
 	z-index: 1000;
 
 	width: 100%;
-	background-color: transparent;
+	background: rgba(255, 255, 255, 0.02);
 	
 	&__inner {
 		display: flex;
@@ -36,15 +36,16 @@
 	
 		&-link {
 			font-size: 18px;
-	
+			font-weight: 400;
 			padding: 8.86px;
 	
-			&:hover {
+			@include hover {
 				border-bottom: 1px solid var(--color-light);
 				transition: var(--transition-duration);
 			}
-	
-			&:last-child {
+
+
+			&--bold {
 				font-weight: 700;
 			}
 		}

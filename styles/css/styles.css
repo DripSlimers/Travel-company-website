@@ -266,7 +266,7 @@ h6 {
 }
 
 body {
-  font-size: clamp(14px, 1.1903187409vw, 18px);
+  font-size: clamp(14px, 1.1904761905vw, 18px);
   font-family: var(--font-family-base);
   font-weight: 400;
   line-height: 34px;
@@ -292,22 +292,22 @@ h1, h2, h3, h4 {
 }
 
 h1, .h1 {
-  font-size: clamp(32px, 5.2903055151vw, 80px);
+  font-size: clamp(32px, 5.291005291vw, 80px);
 }
 
 h2, .h2 {
-  font-size: clamp(24px, 2.3422827668vw, 35.42px);
+  font-size: clamp(24px, 2.3425925926vw, 35.42px);
 }
 
 h3, .h3 {
-  font-size: clamp(17.78px, 1.7570427192vw, 26.57px);
+  font-size: clamp(17.78px, 1.7572751323vw, 26.57px);
 }
 
 .header {
   position: fixed;
   z-index: 1000;
   width: 100%;
-  background-color: transparent;
+  background: rgba(255, 255, 255, 0.02);
 }
 .header__inner {
   display: flex;
@@ -320,7 +320,7 @@ h3, .h3 {
 }
 .header__logo-label {
   font-weight: 700;
-  font-size: clamp(24px, 2.3422827668vw, 35.42px);
+  font-size: clamp(24px, 2.3425925926vw, 35.42px);
 }
 .header__menu {
   font-weight: 400;
@@ -332,13 +332,22 @@ h3, .h3 {
 }
 .header__menu-link {
   font-size: 18px;
+  font-weight: 400;
   padding: 8.86px;
 }
-.header__menu-link:hover {
-  border-bottom: 1px solid var(--color-light);
-  transition: var(--transition-duration);
+@media (hover: hover) {
+  .header__menu-link:hover {
+    border-bottom: 1px solid var(--color-light);
+    transition: var(--transition-duration);
+  }
 }
-.header__menu-link:last-child {
+@media (hover: none) {
+  .header__menu-link:active {
+    border-bottom: 1px solid var(--color-light);
+    transition: var(--transition-duration);
+  }
+}
+.header__menu-link--bold {
   font-weight: 700;
 }
 
@@ -408,6 +417,20 @@ h3, .h3 {
   flex-direction: column;
   align-items: center;
   row-gap: 17.7px;
+}
+@media (hover: hover) {
+  .categories__item:hover {
+    transform: scale(1.1);
+    transition-duration: var(--transition-duration);
+    cursor: pointer;
+  }
+}
+@media (hover: none) {
+  .categories__item:active {
+    transform: scale(1.1);
+    transition-duration: var(--transition-duration);
+    cursor: pointer;
+  }
 }
 .categories__label {
   color: rgba(255, 255, 255, 0.4);
