@@ -9,5 +9,19 @@
     scroll-snap-align: start;
 		border-radius: var(--border-radius-image);
 		overflow: hidden;
+		font-family: var(--font-family-alt);
+
+		position: relative;
+	}
+
+	&__label {
+		position: absolute;
+		bottom: 25.8px;
+		left: 26.57px;
+		font-weight: 500;
+		line-height: 34px;
+		color: var(--color-light);
+
+		@include fluid-text(26.57,17.78);
 	}
 }

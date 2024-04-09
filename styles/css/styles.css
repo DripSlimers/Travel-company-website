@@ -215,11 +215,12 @@ h6 {
   --border-radius-mobile: 32px;
   --border-radius-input: 17.7px;
   --border-radius-image: 8.9px;
-  --border-radius-image-alt: 23.2;
+  --border-radius-image-alt: 23.2px;
   --header-height: 94.1px;
   --section-title-margin-bottom: 35.42px;
   --section-row-gap: 79.71px;
   --font-family-base: Helvetica;
+  --font-family-alt: NetflixSans;
   --container-width: 1246.5px;
   --container-padding-x: 132.84px;
   --container-padding-top: 80px;
@@ -371,8 +372,6 @@ h3, .h3 {
 }
 
 .hero {
-  background: url(./images/hero-bg.png) center no-repeat;
-  background-size: cover;
   color: var(--color-light);
 }
 .hero__inner {
@@ -434,6 +433,7 @@ h3, .h3 {
 }
 .categories__label {
   color: rgba(255, 255, 255, 0.4);
+  font-size: clamp(14px, 1.1712962963vw, 17.71px);
 }
 
 .destinations__list {
@@ -444,6 +444,17 @@ h3, .h3 {
   scroll-snap-align: start;
   border-radius: var(--border-radius-image);
   overflow: hidden;
+  font-family: var(--font-family-alt);
+  position: relative;
+}
+.destinations__label {
+  position: absolute;
+  bottom: 25.8px;
+  left: 26.57px;
+  font-weight: 500;
+  line-height: 34px;
+  color: var(--color-light);
+  font-size: clamp(17.78px, 1.7572751323vw, 26.57px);
 }
 
 .slider {
@@ -451,4 +462,26 @@ h3, .h3 {
   scroll-snap-type: x mandatory;
   overflow-x: scroll;
   scrollbar-width: none;
+}
+
+.offers__content {
+  display: flex;
+  column-gap: 58px;
+}
+
+.offer-block {
+  display: flex;
+  column-gap: 22px;
+}
+.offer-block__image {
+  border-radius: var(--border-radius-image-alt);
+}
+.offer-block__content {
+  display: flex;
+  flex-direction: column;
+}
+.offer-block__company {
+  font-family: Netflix Sans;
+  font-weight: 400;
+  font-size: clamp(14px, 1.1712962963vw, 17.71px);
 }/*# sourceMappingURL=styles.css.map */

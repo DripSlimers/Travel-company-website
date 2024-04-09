@@ -25,5 +25,6 @@
 
 	&__label {	
 		color: rgba(255,255,255, .4);
+		@include fluid-text(17.71,14);
 	}
 }
