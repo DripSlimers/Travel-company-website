@@ -216,6 +216,7 @@ h6 {
   --border-radius-input: 17.7px;
   --border-radius-image: 8.9px;
   --border-radius-image-alt: 23.2px;
+  --box-shadow-color: 0px 4.43px 17.7px 0px rgba(158, 158, 158, 0.25);
   --header-height: 94.1px;
   --section-title-margin-bottom: 35.42px;
   --section-row-gap: 79.71px;
@@ -273,6 +274,9 @@ body {
   line-height: 34px;
   background-color: var(--color-light);
   color: var(--color-dark);
+  background: url(../../images/hero-bg.png) center center no-repeat;
+  background-size: cover;
+  box-shadow: 1px -167px 48px -31px rgb(255, 255, 255) inset;
 }
 
 a,
@@ -305,16 +309,17 @@ h3, .h3 {
 }
 
 .header {
-  position: fixed;
   z-index: 1000;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.02);
+  background-color: #444;
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+  background-color: rgba(255, 255, 255, 0.02);
 }
 .header__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-inline: 52.03px;
   max-height: 94.1px;
   height: var(--header-height);
   color: #fff;
@@ -353,8 +358,6 @@ h3, .h3 {
 }
 
 .pool {
-  background: url(../../images/hero-bg.png) center center no-repeat;
-  background-size: cover;
   box-shadow: 1px -167px 48px -31px rgb(255, 255, 255) inset;
 }
 
@@ -465,13 +468,18 @@ h3, .h3 {
 }
 
 .offers__content {
-  display: flex;
+  font-family: NetflixSans;
   column-gap: 58px;
 }
 
 .offer-block {
   display: flex;
+  min-width: 761.64px;
   column-gap: 22px;
+  border-radius: var(--border-radius-input);
+  box-shadow: var(--box-shadow-color);
+  padding: 26.1px 14.7px 26.1px 14.1px;
+  margin: 15px;
 }
 .offer-block__image {
   border-radius: var(--border-radius-image-alt);
@@ -479,9 +487,36 @@ h3, .h3 {
 .offer-block__content {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 .offer-block__company {
-  font-family: Netflix Sans;
+  margin-bottom: 4.4px;
+}
+.offer-block__description {
+  margin-bottom: 17.7px;
+}
+.offer-block__company, .offer-block__description {
+  color: rgba(0, 0, 0, 0.5);
   font-weight: 400;
   font-size: clamp(14px, 1.1712962963vw, 17.71px);
+}
+
+.button {
+  background-color: var(--color-accent);
+  border-radius: var(--border-radius-button);
+  width: 154.85px;
+  height: 58.42px;
+  color: var(--color-light);
+  font-family: NetflixSans;
+  font-size: clamp(14px, 1.1712962963vw, 17.71px);
+}
+@media (hover: hover) {
+  .button:hover {
+    transform: scale(1.06);
+  }
+}
+@media (hover: none) {
+  .button:active {
+    transform: scale(1.06);
+  }
 }/*# sourceMappingURL=styles.css.map */

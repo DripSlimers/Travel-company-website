@@ -1,16 +1,21 @@
 .header {
-	position: fixed;
+	// position: fixed;
 	z-index: 1000;
+	background-color: #444;
 
-	width: 100%;
-	background: rgba(255, 255, 255, 0.02);
+	max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+	margin-inline: auto;
+	padding-inline: var(--container-padding-x);
+	
+	
+	background-color: rgba(255, 255, 255, 0.02);
 	
 	&__inner {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		
-		padding-inline: 52.03px;
+		// padding-inline: 52.03px;
 		max-height: 94.1px;
 		height: var(--header-height);
 

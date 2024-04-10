@@ -1,0 +1,13 @@
+.button {
+	background-color: var(--color-accent);
+	border-radius: var(--border-radius-button);
+	width: 154.85px;
+	height: 58.42px;
+	color: var(--color-light);
+	font-family: NetflixSans;
+
+	@include fluid-text(17.71, 14);
+	@include hover {
+		transform: scale(1.06);
+	}	
+}
