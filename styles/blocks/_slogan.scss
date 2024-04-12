@@ -1,0 +1,31 @@
+.slogan {
+	background: url(../../images/slogan-image.png) center center no-repeat;
+	background-size: cover;
+
+	width: 100%;
+	height: auto;
+	max-width: 1247.63px;
+	max-height: 437.28px;
+
+	border-radius: 	26.57px;
+
+	color: var(--color-light);
+
+	&__inner {
+		padding: 88.5px 254px 135.5px 89.6px;
+		display: flex;
+		flex-direction: column;
+		row-gap: 26.27px;
+	}
+
+	&__title {
+		max-width: 752px;
+		@include fluid-text(62,28);
+		line-height: 71px;
+	}
+	
+	&__description{
+		@include fluid-text(35.42,24);
+		line-height: 45px;
+	}
+}

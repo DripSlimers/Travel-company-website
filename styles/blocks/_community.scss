@@ -1,0 +1,35 @@
+.community {
+	&__list {
+		column-gap: 17.71px;
+	}
+
+	&__item {
+		padding: 17.71px;
+	}
+
+	&__block {
+		display: flex;
+		flex-direction: column;
+		row-gap: 26.57px;
+	}
+
+	&__text-block {
+		display: flex;
+		flex-direction: column;
+		row-gap: 8.86px;
+	}
+	&__title {
+		position: relative;
+		font-weight: 400;
+		color: var(--color-dark);
+		line-height: 34px;
+
+		@include fluid-text(26.57,17.78);
+	}
+
+	&__label, &__quantity {
+		color: rgba(#000000, .5); //color-dark
+		font-weight: 400;
+		@include fluid-text(17.71,14);
+	}
+}	
