@@ -12,6 +12,11 @@
 		font-family: var(--font-family-alt);
 
 		position: relative;
+		@include hover {
+			// transform: scaleX(1,2);
+			transform: scale(0.97);
+			transition-duration: var(--transition-duration);
+		}
 	}
 
 	&__label {

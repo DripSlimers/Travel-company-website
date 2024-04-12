@@ -274,9 +274,6 @@ body {
   line-height: 34px;
   background-color: var(--color-light);
   color: var(--color-dark);
-  background: url(../../images/hero-bg.png) center center no-repeat;
-  background-size: cover;
-  box-shadow: 1px -167px 48px -31px rgb(255, 255, 255) inset;
 }
 
 a,
@@ -310,11 +307,9 @@ h3, .h3 {
 
 .header {
   z-index: 1000;
-  background-color: #444;
   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
   margin-inline: auto;
   padding-inline: var(--container-padding-x);
-  background-color: rgba(255, 255, 255, 0.02);
 }
 .header__inner {
   display: flex;
@@ -358,6 +353,8 @@ h3, .h3 {
 }
 
 .pool {
+  background: url(../../images/hero-bg.png) center center no-repeat;
+  background-size: cover;
   box-shadow: 1px -167px 48px -31px rgb(255, 255, 255) inset;
 }
 
@@ -449,6 +446,18 @@ h3, .h3 {
   overflow: hidden;
   font-family: var(--font-family-alt);
   position: relative;
+}
+@media (hover: hover) {
+  .destinations__item:hover {
+    transform: scale(0.97);
+    transition-duration: var(--transition-duration);
+  }
+}
+@media (hover: none) {
+  .destinations__item:active {
+    transform: scale(0.97);
+    transition-duration: var(--transition-duration);
+  }
 }
 .destinations__label {
   position: absolute;
